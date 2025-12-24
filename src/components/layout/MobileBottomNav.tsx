@@ -51,7 +51,7 @@ export function MobileBottomNav() {
                 'flex flex-col items-center gap-1 py-2 px-4 rounded-xl transition-all min-w-[80px]',
                 isActive
                   ? 'bg-primary text-white'
-                  : 'text-gray-500'
+                  : 'text-gray-500 bg-white'
               )}
             >
               <span className={isActive ? '[&_svg]:stroke-white [&_svg]:fill-white' : ''}>
