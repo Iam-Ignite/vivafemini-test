@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #E91E8C;
+  --color-primary-light: #FFB8D9;
+  --color-primary-lighter: #FFF0F5;
+  --color-primary-dark: #C4156F;
+  --color-secondary: #0066FF;
+  --color-secondary-light: #E6F0FF;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #F5F5F5;
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl border border-gray-200 p-6 shadow-sm;
+  }
+
+  .card-pink {
+    @apply bg-gradient-to-br from-primary-lighter to-white border-primary-light;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 px-3 py-2 rounded-full border text-sm font-medium transition-all cursor-pointer;
+  }
+
+  .chip-selected {
+    @apply bg-primary-lighter border-primary text-primary;
+  }
+
+  .chip-unselected {
+    @apply bg-white border-gray-200 text-gray-700 hover:border-gray-300;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-full font-medium hover:bg-primary-dark transition-colors;
+  }
+
+  .btn-outline {
+    @apply border border-primary text-primary px-6 py-3 rounded-full font-medium hover:bg-primary-lighter transition-colors;
+  }
+}
