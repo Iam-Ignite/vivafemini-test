@@ -87,7 +87,7 @@ export function CycleHighlight({ cycleDay }: CycleHighlightProps) {
         </span>
       </div>
 
-      {/* Mobile: Single card with dots */}
+     
       {currentTip && (
         <div className="lg:hidden">
           <div className={`p-6 rounded-2xl border text-center ${cardColors[currentTipIndex % cardColors.length]}`}>
@@ -100,7 +100,7 @@ export function CycleHighlight({ cycleDay }: CycleHighlightProps) {
               </p>
             )}
           </div>
-          {/* Pagination dots */}
+
           <div className="flex justify-center gap-2 mt-4">
             {tips.map((_, index) => (
               <button
@@ -115,7 +115,7 @@ export function CycleHighlight({ cycleDay }: CycleHighlightProps) {
         </div>
       )}
 
-      {/* Desktop: Horizontal scroll carousel */}
+
       <div className="hidden lg:flex gap-4 overflow-x-auto pb-2 -mx-2 px-2 scrollbar-hide">
         {tips.map((tip, index) => (
           <div

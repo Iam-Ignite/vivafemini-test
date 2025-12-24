@@ -173,20 +173,20 @@ export function CalendarWidget({
                 className={cn(
                   "aspect-square flex items-center justify-center rounded-full text-sm font-medium transition-all w-9 h-9 mx-auto",
                   !isCurrentMonth && !isCollapsed && "opacity-30",
-                  // Period days - solid pink/magenta
+                  
                   isPeriod && !isToday && "bg-pink-600 text-white",
-                  // Today during period - highlighted
+                  
                   isToday &&
                     isPeriod &&
                     "bg-blue-500 text-white ring-2 ring-white",
-                  // Today not during period - white circle
+                
                   isToday && !isPeriod && "bg-white text-gray-900",
-                  // Predicted period
+          
                   isPredicted &&
                     !isPeriod &&
                     !isToday &&
                     "border-2 border-pink-300 text-white",
-                  // Normal days - outlined circles like in design
+                
                   !isPeriod &&
                     !isPredicted &&
                     !isToday &&
@@ -200,20 +200,14 @@ export function CalendarWidget({
         </div>
       </div>
 
-      {/* Cycle Day Indicator Section */}
+
       <div className="relative bg-white/80 rounded-xl m-4 px-6 pt-4 pb-6 overflow-hidden">
         <div className="relative text-center">
           <p className="text-gray-600 mb-4 text-sm">Today is Cycle Day</p>
 
-          {/* Large cycle day number with flower/scalloped badge */}
           <div className="relative inline-block mb-4">
-            {/* Flower-shaped badge */}
-            <div className="relative h-16 w-16 flex items-center justify-center" style={{
-                  backgroundImage: "url(/image/vector.png)",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                }}>
+         
+            <div className="relative h-16 w-16 flex items-center justify-center flower" >
               <span className="text-3xl font-bold text-white">
                 {today.getDate()}
               </span>
